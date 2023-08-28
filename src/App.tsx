@@ -1,8 +1,15 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import { CreatePage, OrderPage } from './pages';
 
 export const App = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/create');
+  }, []);
+
   return (
     <div className="App">
       <Routes>
